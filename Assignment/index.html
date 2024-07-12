@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venia</title>
+    <script src="https://kit.fontawesome.com/11d1647db8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+  </head>
+  <body>
+    <div class="main_contianer">
+      <header class="header">
+        <i class="fa-solid fa-bars menuicon" id="menuicon" onclick="togglemenu()"></i>
+        <h3 class="letter-space">VENIA</h3>
+        <nav class="menu_items" id="menu_items">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Women</a></li>
+            <li><a>Men</a></li>
+            <li><a>Smart gear</a></li>
+            <li><a>Accssories</a></li>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </header>
+      <div class="category">
+        <section class="category_title">
+          <h2>Mens <br>
+            Outwear's
+          </h2>
+          <div class="category_title_border"></div>
+        </section>
+        <section class="category_image">
+        </section>
+      </div>
+      <div class="products">
+        <section class="filter_section">
+          <div class="operations">
+            <div class="filters" onclick="showfilter()">
+              <i class="fa-solid fa-filter"></i>
+              <span>Filter Results</span>
+            </div>
+            <div class="sort">
+              <i class="fa-solid fa-sort"></i>
+              <span>Sort Products</span>
+            </div>
+          </div>
+          
+          <div class="filter_list" id="filter_list">
+            <div class="title">
+              <h4 class="filter_title">Filters</h4>
+              <i class="fa-solid fa-xmark" onclick="showfilter()"></i>
+            </div>
+            
+            <h5>Category</h5>
+            <div>
+              <input type="checkbox" id="jewellery" name="jewellery" value="jewelery"  onchange="handleCheckboxChange(this)">
+              <label for="jewellery">Jewellery</label>
+            </div>
+            <div>
+              <input type="checkbox" id="electronics" name="electronics" value="electronics"  onchange="handleCheckboxChange(this)">
+              <label for="electronics">Electronics</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mensClothing" name="mensClothing" value="men's clothing"  onchange="handleCheckboxChange(this)">
+              <label for="mensClothing">Men's Clothing</label>
+            </div>
+            <div>
+              <input type="checkbox" id="womensClothing" name="womensClothing" value="women's clothing"  onchange="handleCheckboxChange(this)">
+              <label for="womensClothing">Women's Clothing</label>
+            </div>
+            <div class="allresults">
+              <button onclick="showfilter()" id="allresultbtn"></button>
+            </div>
+          </div>
+        </section>
+        <section class="products_listing">
+          <div class="sort_products">
+            <p id="totallineitem"></p>
+            <div>
+              <select id="sortbytype" onchange="handleSortChange(this)">
+                <option value="price">Sort by price</option>
+                <option value="rating">Sort by rating</option> 
+              </select>
+            </div>
+          </div>
+          <div class="loader" id="loader"></div>
+          <div class="product_lineitems" id="productList">
+            
+          </div>
+        </section>
+
+      </div>
+      <div class="footer">
+        <section class="paddsection">
+          <h4>Account</h4>
+          <a href="#" class="text-color">Sign in</a>
+          <a href="#" class="text-color">Register</a>
+          <a href="#" class="text-color">Order status</a>
+        </section>
+        <section class="paddsection">
+          <h4>About us</h4>
+          <a href="#" class="text-color">Our story</a>
+          <a href="#" class="text-color">Careers</a>
+        </section>
+        <section class="paddsection">
+          <h4>Help</h4>
+          <a href="#" class="text-color">Contact us</a>
+          <a href="#" class="text-color">Order status</a>
+          <a href="#" class="text-color">Returns</a>
+        </section>
+        <section class="paddsection">
+          <h4>Follow us</h4>
+          <p class="text-color">Lorem ipsum lorem ipsum<br>Lorem ipsum lorem ipsum</p>
+          <div class="soicalpaltforms">
+            <img src="./assets/instagram.svg" alt="">
+            <img src="./assets/facebook.svg" alt="">
+            <img src="./assets/twitter.svg" alt="">
+          </div>
+        </section>
+      </div>
+      <div class="footer footer-edge paddsection">
+        <h4 class="text-color letter-space">VENIA</h4>
+        <p class="text-color">
+          <span>
+            c
+          </span>
+          <span>Company Name,Address,city Name,State</span>
+        </p>
+        <div>
+          <a href="#" class="text-color">Terms of use</a>
+          <a href="#" class="text-color">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
